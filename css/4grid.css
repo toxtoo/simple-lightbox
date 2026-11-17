@@ -1,0 +1,64 @@
+/*
+   File: 4grid.css
+   Created: 14 November 2026
+*/
+
+/* Minimal CSS Reset */
+* { margin: 0; padding: 0; box-sizing: border-box;-moz-box-sizing:
+    border-box;scroll-behavior: smooth; } 
+html { overflow-y: scroll; } 
+body { background: #fff; color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px; font-weight: normal;
+    line-height: 1.6; letter-spacing: 0.1em; 
+}
+h1 {margin-bottom: 0.25em; line-height: 1.1; } 
+h2 {margin-bottom: 0.75em; line-height: 1.2; } 
+h3, h4 { margin-bottom: 0.5em; } 
+p { margin: 0 0 0.75em; } 
+img { max-width: 100%; height: auto; }
+/* End reset */
+
+/* ==========================================
+4GRID - 4 column float-based responsive grid
+IE9+ firefox 4+ and all Modern browsers
+============================================= */
+
+.row:after { display: table; clear: both; content: ""; }
+.row { width: 100%; margin-bottom: 1.6%; }
+.col { float: left; margin-left: 1.6%; }
+.col:first-child { margin-left: 0; }
+.col:last-child { float: right; }
+.row:last-child { margin-bottom: 0; }
+
+/* ========== Column widths ========== */
+.col.full { width: 100%; }
+.col.half { width: 49.2%; }
+.col.one-third { width: 32.25%; }
+.col.two-thirds { width: 66%; }
+.col.one-fourth { width: 23.79%; }
+.col.three-fourths { width: 74.5%; }
+
+/* ========== Media queries ========== */
+@media screen and (max-width: 600px) {
+	.col.full,
+	.col.half,
+	.col.one-third,
+	.col.two-thirds,
+	.col.one-fourth,
+	.col.three-fourths
+	{ width: 100%; margin-left: 0; margin-bottom: 1.6%; text-align: center; }
+}
+
+/* End 4 col grid
+==================== */
+
+.gal-wrap {
+	margin: 2em auto;
+	width: 98%;
+	max-width: 1200px;
+	min-width: 320px;
+	height: auto;
+	background-color: #fff;
+	background-size: 100%;
+}
